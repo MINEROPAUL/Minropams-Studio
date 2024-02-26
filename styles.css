@@ -1,0 +1,459 @@
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Définition des variables de couleur */
+:root {
+  --primary-color: #8A2BE2; /* Violet */
+  --secondary-color: #000000; /* Noir */
+  --light-color: #FFFFFF; /* Blanc */
+  --accent-color: #0056b3; /* Bleu plus foncé */
+}
+
+/* Styles généraux */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
+  background-color: #f4f4f4; /* Couleur d'arrière-plan */
+  color: var(--secondary-color); /* Couleur du texte par défaut */
+}
+
+.container {
+  max-width: 100%;
+  margin: 100%;
+  padding: 100%;
+}
+
+/* En-tête */
+.main-header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center; /* Centrage du texte */
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 36px; /* Taille de police plus grande pour le titre */
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 9px; /* Ajout d'une marge droite pour créer de l'espace entre les noms de section */
+}
+
+.menu li a:hover {
+  color: rgb(38, 0, 255);
+  text-shadow: 0 0 5px var(--secondary-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur principal avec une largeur maximale de 1200px */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+/* Styles pour les sections de la page */
+.section {
+  padding: 100px 0;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin-top: 100px;
+}
+
+.container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.container p {
+  font-size: 20px;
+}
+
+/* Effets de survol pour les sections */
+.section:hover {
+  transform: translateY(0);
+}
+
+/* Styles pour les jeux */
+.games-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.game {
+  width: calc(50% - 20px);
+  background-color: var(--light-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.game p {
+  color: var(--secondary-color);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px; /* Largeur maximale du contenu du footer */
+  margin: 0 auto; /* Centrer le contenu horizontalement */
+  text-align: center; /* Centrer le texte */
+}
+
+.footer-links {
+  margin-top: 20px; /* Espacement entre le texte et les icônes */
+}
+
+.footer-links a {
+  display: inline-block; /* Afficher les liens en ligne */
+  margin: 0 10px; /* Espacement entre les icônes */
+}
+
+.footer-links img {
+  width: 40px; /* Ajustez la taille de l'icône selon vos besoins */
+  height: 40px;
+  border-radius: 50%; /* Crée un cercle autour de l'icône */
+  border: 2px solid #f4f7ff; /* Couleur et épaisseur de la bordure */
+  padding: 5px; /* Espace entre l'icône et la bordure */
+}
+
+
+
+/* Styles pour la section Partenaires */
+#partners {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+#partners .container {
+  text-align: center;
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+#partners h2 {
+  color: #8a2be2;
+  margin-bottom: 30px;
+}
+
+/* Effets de survol pour les liens */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Résponsive */
+@media only screen and (max-width: 1200px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 500px; /* Ajustement de la valeur top */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon {
+    display: block;
+    color: var(--light-color);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu li {
+    margin-bottom: 0%;
+  }
+
+  .menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu li a {
+    color: var(--light-color);
+  }
+}
+
+.show-menu {
+  display: flex !important;
+}
+
+/* Styles pour la section Galerie */
+#gallery .container {
+  background-color: #f9f9f9; /* Couleur de fond de la section */
+  text-align: center; /* Centrage du contenu */
+  padding: 50px 0; /* Espacement intérieur de la section */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center; /* Centrage horizontal des images */
+  flex-wrap: wrap; /* Permettre le retour à la ligne des images si elles ne rentrent pas toutes sur une seule ligne */
+  margin-top: 2px;
+}
+
+/* Pour les images dans la section Galerie */
+.image-gallery img {
+  max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur parent */
+  height: auto; /* Hauteur automatique pour conserver les proportions de l'image */
+  margin-bottom: 20px; /* Ajouter un espacement en bas de chaque image */
+}
+
+
+/* Styles pour la section Projets */
+#projects {
+  padding: 50px 0;
+}
+
+#projects .container {
+  text-align: center;
+}
+
+#projects h2 {
+  color: #8a2be2;
+  margin-bottom: 30px;
+}
+
+/* Styles pour les projets individuels */
+.project {
+  margin-bottom: 40px;
+}
+
+.project h3 {
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #000;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Pour les images des jeux */
+.game-image {
+  max-width: 100%; /* La largeur maximale de l'image est égale à la largeur de son conteneur parent */
+  height: auto; /* Hauteur automatique pour conserver les proportions de l'image */
+}
+
+
+/* Style pour la section Communauté */
+#community {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+#community h2 {
+  color: #8a2be2;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#community p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#community .discord-link {
+  margin-bottom: 20px;
+}
+
+#community .discord-link img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#community .discord-link a {
+  color: #7289da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#community .discord-description {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Style pour l'icône Discord */
+.discord-link img {
+  width: 70px; /* Ajustez la taille de l'icône selon vos besoins */
+  height: 70px;
+  border-radius: 50%; /* Crée un cercle autour de l'icône */
+  border: 2px solid #7289da; /* Couleur et épaisseur de la bordure */
+  padding: 5px; /* Espace entre l'icône et la bordure */
+}
+
+/* Style pour la section Partenaires */
+#partners {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+#partners .container {
+  text-align: center;
+}
+
+#partners h2 {
+  color: #8a2be2;
+  margin-bottom: 30px;
+}
+
+.partner {
+  display: flex; /* Utiliser flexbox pour aligner les éléments */
+  align-items: center; /* Centrer verticalement les éléments */
+  margin-bottom: 30px; /* Espacement entre les partenaires */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
+  padding: 15px; /* Ajout de marge interne pour l'ombre */
+  justify-content: center; /* Centrer horizontalement les éléments */
+}
+
+.partner-logo {
+  width: 300px; /* Augmentez la largeur du conteneur du logo */
+  height: 300px; /* Augmentez la hauteur du conteneur du logo */
+  border-radius: 20%;
+  overflow: hidden;
+  margin-right: 20px;
+  background-color: #c8b2dd;
+}
+
+.partner-logo img {
+  width: 100%; /* Remplir le cercle avec l'image */
+}
+
+.partner-info {
+  flex-grow: 1;
+}
+
+.partner-info p {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.partner-info a {
+  color: #8a2be2;
+  text-decoration: none;
+}
+
+.partner-info a:hover {
+  text-decoration: underline;
+}
+
+.partner-info .tiktok-link {
+  margin-left: 10px; /* Espacement entre les liens */
+  color: #8a2be2; /* Couleur distincte pour le lien TikTok */
+}
+
+/* Style pour la section FAQ */
+#faq {
+  padding: 50px 0; /* Espacement intérieur de la section */
+}
+
+#faq .container {
+  text-align: center; /* Centrer le contenu */
+}
+
+#faq h2 {
+  color: #8a2be2; /* Couleur du titre FAQ */
+  font-size: 2rem; /* Taille de police du titre */
+  margin-bottom: 20px; /* Espacement en bas du titre */
+}
+
+.faq-list {
+  display: grid; /* Utiliser CSS Grid pour organiser les questions et réponses */
+  gap: 20px; /* Espacement entre les éléments de la grille */
+  justify-content: center; /* Centrer horizontalement les éléments de la grille */
+}
+
+.faq-item {
+  padding: 20px; /* Espacement intérieur des éléments de la FAQ */
+  border-radius: 8px; /* Bordures arrondies */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  text-align: left; /* Aligner le texte à gauche */
+}
+
+.faq-item h3 {
+  color: #8a2be2; /* Couleur du titre de la question */
+  margin-top: 0; /* Supprimer l'espacement en haut du titre */
+}
+
+.faq-item p {
+  color: #333; /* Couleur du texte de la réponse */
+  margin-top: 10px; /* Espacement en haut du texte de la réponse */
+}
+
+/* CSS pour l'image de l'équipe */
+.team-member-img {
+  width: 150px; /* Ajustez la largeur selon vos besoins */
+  height: 150px; /* Hauteur fixe pour conserver un rapport 1:1 */
+  border-radius: 50%; /* Créer un cercle avec le bord arrondi */
+  object-fit: cover; /* Assurez-vous que l'image couvre entièrement le cercle */
+  margin-bottom: 10px; /* Espacement entre les membres d'équipe */
+}
+
+.profile-img {
+  border-radius: 100%; /* Pour créer une forme de cercle */
+  width: 50%; /* Définir la largeur souhaitée */
+  height: 50%; /* Définir la hauteur souhaitée */
+}
